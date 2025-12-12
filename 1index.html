@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Devoted 2 Dance — Complete Page</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Tableau Embed API -->
+  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Header / Nav -->
+  <header>
+    <h1>Devoted 2 Dance</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#classes">Classes</a>
+      <a href="#video">Video</a>
+      <a href="#tableau">Dashboard</a>
+      <a href="#webapp">Fun App</a>
+    </nav>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <p>Welcome to Devoted 2 Dance — where passion, creativity, and movement come alive! We offer ballet, contemporary, hip hop and more, all in pastel-pink, joyful vibes.</p>
+    <img src="https://images.unsplash.com/photo-1599058917211-71e204f18187?auto=format&fit=crop&w=800&q=80"
+         alt="Dancers on stage"
+         class="main-image">
+  </section>
+
+  <!-- Classes -->
+  <section id="classes">
+    <h2 class="section-title">Our Classes</h2>
+    <ol>
+      <li>Ballet
+        <ul>
+          <li>Elegant & graceful technique for all levels</li>
+          <li>Focus on posture and flexibility</li>
+        </ul>
+      </li>
+      <li>Hip Hop
+        <ul>
+          <li>High energy, rhythm, and style</li>
+        </ul>
+      </li>
+      <li>Contemporary
+        <ul>
+          <li>Expressive movement and emotional flow</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <!-- YouTube Video -->
+  <section id="video">
+    <h2 class="section-title">Dance Inspiration Video</h2>
+    <div class="video-container">
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/BW9Q930DiK4?si=_kKn5QkEqmvVJPu6"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Tableau Dashboard -->
+  <section id="tableau">
+    <h2 class="section-title">Interactive Dance/Arts Dashboard</h2>
+    <tableau-viz
+      id="danceViz"
+      src="https://public.tableau.com/views/PerformingArtsTableauDashboard2/Dashboard1?:embed=yes&:toolbar=yes&:showVizHome=no"
+      width="100%"
+      height="800px"
+      hide-tabs>
+    </tableau-viz>
+  </section>
+
+  <!-- Small Web App (Riddle Generator) -->
+  <section id="webapp" class="webapp-section">
+    <h2 class="section-title">🎭 Fun Dance Riddle Generator</h2>
+    <div id="riddleOutput">Click below for a riddle!</div>
+    <button onclick="showRiddle()">Get a Riddle</button>
+
+    <script>
+      const riddles = [
+        "I move without legs and spin without arms. I dance on your toes. What am I? — A Ballet Ribbon!",
+        "I twist and turn, leap high in the air, and follow the music’s beat. What am I? — A Dancer!",
+        "I float and glide, yet never touch the floor. Who am I? — A Pointe Shoe!",
+        "I take leaps and bounds, but never leave the stage. Who am I? — A Performer!"
+      ];
+      function showRiddle() {
+        const r = riddles[Math.floor(Math.random()*riddles.length)];
+        document.getElementById('riddleOutput').innerText = r;
+      }
+    </script>
+  </section>
+
+</body>
+</html>

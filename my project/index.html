@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anna Holmes — Résumé</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Parisienne&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #fff7fb;
+      --card: #ffffff;
+      --accent: #d14b86;
+      --muted: #6b5568;
+      --border: #ffd6ea;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,var(--bg),#fff); color:#2b2b2b}
+    .container{max-width:900px;margin:36px auto;padding:28px}
+    .header{
+      display:flex;gap:24px;align-items:center;justify-content:space-between;background:linear-gradient(90deg,#fff,#fff);padding:22px;border-radius:18px;border:3px solid var(--border);
+      box-shadow:0 10px 30px rgba(209,75,134,0.06);
+    }
+    .name-block{display:flex;flex-direction:column}
+    .name{font-family:'Parisienne',cursive;font-size:42px;color:var(--accent);margin:0}
+    .contact{font-size:0.95rem;color:var(--muted);margin-top:6px}
+    .summary{
+      margin-top:20px;padding:20px;background:var(--card);border-radius:14px;border:2px dashed var(--border);
+      box-shadow:0 8px 20px rgba(209,75,134,0.04);
+      line-height:1.6;color:#333;
+    }
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:22px}
+    @media (max-width:880px){ .grid{grid-template-columns:1fr} }
+
+    /* Left column (main content) */
+    .card{background:var(--card);padding:20px;border-radius:14px;border:2px dashed var(--border);box-shadow:0 8px 20px rgba(209,75,134,0.04)}
+    h2.section-title{font-size:1.35rem;color:var(--accent);margin:0 0 12px;font-weight:600}
+    .job{margin-bottom:18px}
+    .job h3{margin:0;font-size:1.05rem;color:#b03d7a}
+    .meta{font-size:0.9rem;color:var(--muted);margin-top:6px}
+    .job p{margin:8px 0 0;line-height:1.6}
+
+    /* Right column (sidebar) */
+    .sidebar .box{margin-bottom:18px;padding:16px;border-radius:12px;background:linear-gradient(180deg,#fff,#fff0f7);border:2px solid var(--border)}
+    .skills-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .skill-pill{background:#fff;border:1px solid #ffdced;padding:6px 10px;border-radius:999px;font-size:0.9rem;color:#9b446f}
+
+    ul.clean{padding-left:16px;margin:8px 0 0}
+    ul.clean li{margin-bottom:8px;line-height:1.5;color:#333}
+
+    /* footer */
+    .footer{margin-top:28px;text-align:center;font-size:0.9rem;color:var(--muted)}
+  </style>
+</head>
+<body>
+
+  <main class="container" role="main">
+    <!-- header -->
+    <header class="header" aria-label="Resume header">
+      <div class="name-block">
+        <h1 class="name">Anna Holmes</h1>
+        <div class="contact">623-208-9643 • Annatheoni8@gmail.com • Provo, Utah 84605</div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-weight:700;color:var(--muted)">Front Desk Receptionist & Dance Instructor</div>
+        <div style="font-size:0.85rem;color:var(--muted);margin-top:6px">Reliable • Customer-focused • Event scheduling • Youth leadership</div>
+      </div>
+    </header>
+
+    <!-- summary -->
+    <section class="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading" style="margin:0 0 10px;font-size:1.05rem;color:var(--accent)">SUMMARY</h2>
+      <p>
+        Dedicated front desk receptionist with strong customer service skills and experience in event scheduling, conflict resolution, and clear communication.
+        Comfortable working with people of all ages and committed to creating a positive visitor experience. Also experienced as a dance instructor and coach,
+        fostering teamwork and skill development in youth.
+      </p>
+    </section>
+
+    <div class="grid" aria-live="polite">
+
+      <!-- main column -->
+      <div>
+        <!-- EXPERIENCE -->
+        <section class="card" aria-labelledby="exp-heading">
+          <h2 id="exp-heading" class="section-title">Experience</h2>
+
+          <article class="job" aria-labelledby="job1">
+            <h3 id="job1">Front Desk Receptionist — Anthem Community Center</h3>
+            <div class="meta">Anthem, Arizona • June 2024 — July 2025</div>
+            <p>
+              Greeted visitors warmly and directed them to appropriate resources; managed incoming calls and routed them efficiently;
+              scheduled appointments and maintained the calendar for community events; ensured the front desk area was organized and welcoming;
+              responded promptly to inquiries by phone and email while maintaining confidentiality of personal and financial information.
+            </p>
+            <ul class="clean" aria-label="front desk highlights">
+              <li>Coordinated scheduling for special programs, meetings, and conferences.</li>
+              <li>Signed for and managed package deliveries and distribution.</li>
+              <li>Collaborated with staff to improve visitor experience.</li>
+            </ul>
+          </article>
+
+          <article class="job" aria-labelledby="job2">
+            <h3 id="job2">Cheerleading Coach — Core 5</h3>
+            <div class="meta">Anthem, Arizona • Jan 2025 — June 2025</div>
+            <p>
+              Developed practice plans to improve team skills, coordinated practice and competition schedules,
+              provided competition support, encouraged sportsmanship, and communicated regularly with parents.
+            </p>
+            <ul class="clean">
+              <li>Trained athletes in stunts, tumbling, jumps, cheers, and dances.</li>
+              <li>Designed routines that showcased individual strengths.</li>
+            </ul>
+          </article>
+
+          <article class="job" aria-labelledby="job3">
+            <h3 id="job3">Dance Instructor — Diamond Dance Works</h3>
+            <div class="meta">Anthem, Arizona • Oct 2024 — May 2025</div>
+            <p>
+              Taught dance classes across styles for diverse age groups; demonstrated techniques and choreography;
+              provided constructive feedback; managed attendance, fees and rehearsal schedules; and selected appropriate music for classes.
+            </p>
+            <ul class="clean">
+              <li>Monitored student progress and offered individualized coaching.</li>
+              <li>Maintained a safe, encouraging classroom environment.</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- Education -->
+        <section class="card" aria-labelledby="edu-heading" style="margin-top:18px">
+          <h2 id="edu-heading" class="section-title">Education & Training</h2>
+          <p style="margin:0 0 8px"><strong>High School Diploma</strong></p>
+          <div class="meta">Boulder Creek, Phoenix, AZ • May 2025</div>
+          <p style="margin-top:10px">Relevant coursework and activities include leadership in student government and varsity pom team participation.</p>
+        </section>
+
+        <!-- Awards -->
+        <section class="card" aria-labelledby="awards-heading" style="margin-top:18px">
+          <h2 id="awards-heading" class="section-title">Awards & Honors</h2>
+          <ul class="clean">
+            <li>Most Spirited Award — 2025</li>
+            <li>Jag-Heart Award — 2024</li>
+            <li>National Honor Society Certificate</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- sidebar -->
+      <aside class="sidebar">
+        <div class="box">
+          <h3 style="margin:0 0 8px;color:var(--accent)">Skills</h3>
+          <div class="skills-list" role="list">
+            <span class="skill-pill">Customer Service</span>
+            <span class="skill-pill">Effective Communication</span>
+            <span class="skill-pill">Event Scheduling</span>
+            <span class="skill-pill">Conflict Resolution</span>
+            <span class="skill-pill">Time Management</span>
+            <span class="skill-pill">Phone Etiquette</span>
+            <span class="skill-pill">Team Collaboration</span>
+            <span class="skill-pill">Leadership Development</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;color:var(--accent)">Activities</h3>
+          <ul class="clean" aria-label="activities list">
+            <li>4-Year Varsity Pom Member</li>
+            <li>Head Captain — Varsity Pom</li>
+            <li>Ski Club — Founder & President</li>
+            <li>4-Year Student Government Member</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px;color:var(--accent)">Contact</h3>
+          <p style="margin:0;color:var(--muted)">Provo, Utah 84605<br>Phone: 623-208-9643<br>Email: <a href="mailto:Annatheoni8@gmail.com">Annatheoni8@gmail.com</a></p>
+        </div>
+      </aside>
+
+    </div>
+
+    <div class="footer">
+      <small>Resume generated from provided information. (Source file referenced.)</small>
+    </div>
+  </main>
+</body>
+</html>
